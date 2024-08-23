@@ -1,12 +1,12 @@
 from openai import OpenAI
 
-client = OpenAI(api_key="your_api_key", base_url="https://api.deepseek.com")
+client = OpenAI(api_key="api", base_url="https://api.deepseek.com")
 
 response = client.chat.completions.create(
     model="deepseek-chat",
     messages=[
-        {"role": "system", "content": "a helpful assistant"},
-        {"role": "user", "content": "write an essay about dragon"},
+        {"role": "system", "content": "a helpful assistant, 回答在五百字以内"},
+        {"role": "user", "content": "文学创作"},
     ],
     stream=False
 )
